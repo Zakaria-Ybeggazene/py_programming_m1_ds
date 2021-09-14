@@ -14,8 +14,7 @@ def cat():
     for name in file_names:
         try:
             with open(name, 'r') as f:
-                lines = f.readlines()
-                for l in lines:
+                for l in f:
                     print(l, end="")
         except IOError as error:
             print("cat: {}: No such file or directory".format(name))
